@@ -149,7 +149,7 @@ export const useMessengerStore = create<MessengerState & MessengerActions>()(
               c.id === chatId
                 ? {
                     ...c,
-                    lastMessageText: 'История очищена',
+                    lastMessageText: 'History cleared',
                     lastMessageAt: now,
                   }
                 : c,

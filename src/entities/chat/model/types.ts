@@ -8,7 +8,7 @@ export interface Chat {
   lastMessageText: string
   lastMessageAt: number
   unreadCount: number
-  /** Для диалогов */
+  /** Direct chats only */
   peerUserId?: string
   isOnline?: boolean
   muted?: boolean

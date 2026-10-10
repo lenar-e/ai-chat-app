@@ -29,29 +29,29 @@ export function SettingsView({
             type="button"
             onClick={onBack}
             className="flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:bg-white/5"
-            aria-label="Назад"
+            aria-label="Back"
           >
             <ChevronLeft size={22} strokeWidth={1.75} aria-hidden />
           </button>
         ) : null}
         <h1 className="min-w-0 flex-1 truncate text-[17px] font-semibold text-slate-100">
-          Настройки
+          Settings
         </h1>
       </header>
 
       <div className="min-h-0 flex-1 overflow-y-auto px-4 py-5">
         <p className="mb-5 text-[13px] text-slate-500">
-          Локальные настройки интерфейса (без сервера).
+          Local interface preferences (no server involved).
         </p>
 
         <div className="space-y-4">
           <label className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl bg-[#17212b] px-4 py-4 ring-1 ring-black/35">
             <div className="min-w-0">
               <div className="text-[15px] font-semibold text-slate-100">
-                Компактные сообщения
+                Compact messages
               </div>
               <div className="mt-1 text-[13px] text-slate-400">
-                Меньшие отступы в пузырях.
+                Tighter padding inside bubbles.
               </div>
             </div>
             <input
@@ -65,10 +65,10 @@ export function SettingsView({
           <label className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl bg-[#17212b] px-4 py-4 ring-1 ring-black/35">
             <div className="min-w-0">
               <div className="text-[15px] font-semibold text-slate-100">
-                Enter отправляет сообщение
+                Press Enter to send
               </div>
               <div className="mt-1 text-[13px] text-slate-400">
-                Выкл: Enter переносит строку, отправка — кнопкой.
+                Off: Enter inserts a line break, send with the button.
               </div>
             </div>
             <input

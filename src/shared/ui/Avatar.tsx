@@ -5,7 +5,7 @@ interface AvatarProps {
   hue: number
   size?: 'sm' | 'md' | 'lg'
   className?: string
-  /** Индикатор «в сети» как в Telegram */
+  /** Telegram-style "online" indicator */
   online?: boolean
 }
 

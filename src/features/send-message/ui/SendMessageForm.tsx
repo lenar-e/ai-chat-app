@@ -10,7 +10,7 @@ import { Loader2, Paperclip, Send } from 'lucide-react'
 import { useMessengerStore } from '@/entities/chat'
 import { cn } from '@/shared/lib/cn'
 
-/** Поле ввода сообщения и отправка в мок-бэкенд через zustand */
+/** Message composer; sends to the mock backend via the zustand store */
 export function SendMessageForm() {
   const activeChatId = useMessengerStore((s) => s.activeChatId)
   const sendText = useMessengerStore((s) => s.sendText)
@@ -76,7 +76,7 @@ export function SendMessageForm() {
               'mb-[2px] flex h-[44px] w-[44px] shrink-0 items-center justify-center rounded-full text-slate-300',
               'hover:bg-white/[0.08] active:bg-white/[0.12]',
             )}
-            title="Выбрать файлы (локально)"
+            title="Attach files (local only)"
           >
             <Paperclip size={21} strokeWidth={1.75} className="shrink-0" />
           </button>
@@ -87,7 +87,7 @@ export function SendMessageForm() {
             rows={1}
             onChange={(e) => setValue(e.target.value)}
             onKeyDown={onKeyDown}
-            placeholder="Напишите сообщение..."
+            placeholder="Write a message..."
             className={cn(
               'max-h-[12.5rem] min-h-[44px] w-full resize-none px-3 py-[11px] text-[15px] leading-relaxed text-slate-100',
               'rounded-[999px] bg-transparent outline-none md:min-h-[46px]',
@@ -106,8 +106,8 @@ export function SendMessageForm() {
                 ? 'bg-gradient-to-br from-sky-300 to-sky-500 text-[#0f1b26] shadow-md shadow-black/25 hover:-translate-y-px hover:from-sky-200 hover:to-sky-400'
                 : 'cursor-not-allowed bg-slate-800/90 text-slate-500 shadow-none',
             )}
-            title="Отправить"
-            aria-label="Отправить сообщение"
+            title="Send"
+            aria-label="Send message"
           >
             {sending ? (
               <Loader2

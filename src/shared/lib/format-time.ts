@@ -1,6 +1,6 @@
-/** Локализованное время сообщения для шапки/пузырька */
+/** Localized message time for the header / bubble */
 export function formatMessageTime(timestamp: number): string {
-  return new Date(timestamp).toLocaleTimeString('ru-RU', {
+  return new Date(timestamp).toLocaleTimeString('en-US', {
     hour: '2-digit',
     minute: '2-digit',
   })
@@ -18,7 +18,7 @@ export function formatChatListTime(timestamp: number): string {
     return formatMessageTime(timestamp)
   }
 
-  return date.toLocaleDateString('ru-RU', {
+  return date.toLocaleDateString('en-US', {
     day: 'numeric',
     month: 'short',
   })

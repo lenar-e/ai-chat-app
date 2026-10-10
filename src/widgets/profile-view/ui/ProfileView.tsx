@@ -57,13 +57,13 @@ export function ProfileView({
             type="button"
             onClick={onBack}
             className="flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:bg-white/5"
-            aria-label="Назад"
+            aria-label="Back"
           >
             <ChevronLeft size={22} strokeWidth={1.75} aria-hidden />
           </button>
         ) : null}
         <h1 className="min-w-0 flex-1 truncate text-[17px] font-semibold text-slate-100">
-          Профиль
+          Profile
         </h1>
       </header>
 
@@ -77,7 +77,7 @@ export function ProfileView({
                 htmlFor="profile-display-name"
                 className="mb-2 block text-[13px] font-medium text-slate-400"
               >
-                Отображаемое имя
+                Display name
               </label>
               <input
                 id="profile-display-name"
@@ -93,7 +93,7 @@ export function ProfileView({
                 htmlFor="profile-username"
                 className="mb-2 block text-[13px] font-medium text-slate-400"
               >
-                Имя пользователя
+                Username
               </label>
               <input
                 id="profile-username"
@@ -117,7 +117,7 @@ export function ProfileView({
                   : 'cursor-not-allowed bg-slate-800 text-slate-500',
               )}
             >
-              Сохранить
+              Save
             </button>
           </form>
         </div>

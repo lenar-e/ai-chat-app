@@ -1,4 +1,4 @@
-/** Имитация сетевой задержки мок-бэкенда */
+/** Simulates the network latency of a mock backend */
 export function mockDelay(minMs = 250, maxMs = 700): Promise<void> {
   const ms = minMs + Math.random() * (maxMs - minMs)
   return new Promise((resolve) => setTimeout(resolve, ms))
@@ -6,7 +6,7 @@ export function mockDelay(minMs = 250, maxMs = 700): Promise<void> {
 
 export function buildMockReply(chatTitle: string, isBot: boolean): string {
   if (isBot) {
-    return 'Я бот-поддержка (мок). Сообщение получено — типовой ответ: проверьте раздел «Материалы» и напишите номер урока.'
+    return "I'm the support bot (mock). Message received — standard reply: check the Docs section and share your ticket number."
   }
-  return `Принял 🙂 Это автоответ для «${chatTitle}». Когда подключим реальный бэкенд, здесь будет живой диалог.`
+  return `Got it 🙂 This is an auto-reply for "${chatTitle}". Once a real backend is connected, this will be a live conversation.`
 }

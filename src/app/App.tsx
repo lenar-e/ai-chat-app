@@ -1,6 +1,6 @@
 import { MessengerPage } from '@/pages/messenger/ui/MessengerPage'
 
-/** Корневой компонент приложения (слой App в FSD). */
+/** Root application component (the App layer in FSD). */
 export default function App() {
   return <MessengerPage />
 }

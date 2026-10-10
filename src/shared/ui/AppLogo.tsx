@@ -6,7 +6,7 @@ interface AppLogoProps {
   className?: string
 }
 
-/** Фирменная эмблема вместо буквы O: блок чатов + градиент */
+/** Brand emblem: a chat glyph on a gradient tile */
 export function AppLogo({ variant = 'rail', className }: AppLogoProps) {
   const hero = variant === 'hero'
 

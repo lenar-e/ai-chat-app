@@ -11,7 +11,7 @@ interface ChatPanelProps {
   showBack?: boolean
 }
 
-/** Правая колонка: шапка, лента сообщений и поле ввода */
+/** Right column: header, message feed and the composer */
 export function ChatPanel({ className, showBack }: ChatPanelProps) {
   const activeChatId = useMessengerStore((s) => s.activeChatId)
   const chatSettingsChatId = useMessengerStore((s) => s.chatSettingsChatId)

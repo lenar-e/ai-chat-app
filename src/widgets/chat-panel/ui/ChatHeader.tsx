@@ -58,12 +58,12 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
 
   const subtitle =
     chat.type === 'group'
-      ? `${chat.participantIds.length} участников`
+      ? `${chat.participantIds.length} members`
       : chat.isOnline
-        ? 'онлайн'
+        ? 'online'
         : peer?.username
           ? `@${peer.username}`
-          : 'был недавно'
+          : 'last seen recently'
 
   const hue =
     chat.type === 'direct' && chat.peerUserId
@@ -92,7 +92,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
             type="button"
             onClick={onBack}
             className="flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:bg-white/5 md:hidden"
-            aria-label="Назад к списку"
+            aria-label="Back to chat list"
           >
             <ChevronLeft
               size={22}
@@ -113,7 +113,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
             {chat.title}
             {chat.muted ? (
               <span className="ml-2 text-[12px] font-medium text-slate-500">
-                без звука
+                muted
               </span>
             ) : null}
           </div>
@@ -129,7 +129,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
               ? 'bg-sky-500/15 text-sky-200'
               : 'text-slate-300 hover:bg-white/5',
           )}
-          title={chatSearchOpen ? 'Закрыть поиск' : 'Поиск по чату'}
+          title={chatSearchOpen ? 'Close search' : 'Search in chat'}
           aria-pressed={chatSearchOpen}
         >
           {chatSearchOpen ? (
@@ -143,7 +143,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
           type="button"
           onClick={() => setChatSearchOpen(!chatSearchOpen)}
           className="flex h-10 w-10 items-center justify-center rounded-full text-slate-300 hover:bg-white/5 md:hidden"
-          title={chatSearchOpen ? 'Закрыть поиск' : 'Поиск по чату'}
+          title={chatSearchOpen ? 'Close search' : 'Search in chat'}
           aria-pressed={chatSearchOpen}
         >
           {chatSearchOpen ? (
@@ -161,7 +161,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
               'flex h-10 w-10 items-center justify-center rounded-full text-slate-300 hover:bg-white/5',
               menuOpen && 'bg-white/5',
             )}
-            title="Меню чата"
+            title="Chat menu"
             aria-expanded={menuOpen}
             aria-haspopup="menu"
           >
@@ -182,7 +182,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
                   openChatSettings(chatId)
                 }}
               >
-                Настройки чата
+                Chat settings
               </button>
             </div>
           ) : null}
@@ -199,7 +199,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
               type="search"
               value={chatSearchQuery}
               onChange={(e) => setChatSearchQuery(e.target.value)}
-              placeholder="Слово или фраза в сообщениях"
+              placeholder="Word or phrase in messages"
               className="h-10 w-full rounded-[22px] border border-transparent bg-black/35 pl-[38px] pr-3 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-sky-500/50"
               autoCapitalize="off"
               autoCorrect="off"
@@ -219,7 +219,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
                   ? 'cursor-not-allowed text-slate-600'
                   : 'text-slate-200',
               )}
-              title="Предыдущее вхождение"
+              title="Previous match"
             >
               <ChevronUp size={20} strokeWidth={1.75} aria-hidden />
             </button>
@@ -233,7 +233,7 @@ export function ChatHeader({ chatId, onBack, showBack }: ChatHeaderProps) {
                   ? 'cursor-not-allowed text-slate-600'
                   : 'text-slate-200',
               )}
-              title="Следующее вхождение"
+              title="Next match"
             >
               <ChevronDown size={20} strokeWidth={1.75} aria-hidden />
             </button>

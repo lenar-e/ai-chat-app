@@ -45,19 +45,19 @@ export function ChatSettingsView({
       )}
       role="dialog"
       aria-modal="true"
-      aria-label="Настройки чата"
+      aria-label="Chat settings"
     >
       <header className="flex items-center gap-2 border-b border-black/35 bg-[#17212b] px-3 py-3">
         <button
           type="button"
           onClick={closeChatSettings}
           className="flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:bg-white/5"
-          aria-label="Закрыть"
+          aria-label="Close"
         >
           <X size={22} strokeWidth={1.75} aria-hidden />
         </button>
         <h2 className="min-w-0 flex-1 truncate text-[17px] font-semibold text-slate-100">
-          Настройки чата
+          Chat settings
         </h2>
       </header>
 
@@ -68,17 +68,17 @@ export function ChatSettingsView({
               {chat.title}
             </div>
             <div className="mt-1 text-[13px] text-slate-500">
-              {chat.type === 'group' ? 'Групповой чат' : 'Личный чат'}
+              {chat.type === 'group' ? 'Group chat' : 'Direct chat'}
             </div>
           </div>
 
           <label className="flex cursor-pointer items-start justify-between gap-4 rounded-2xl bg-[#17212b] px-4 py-4 ring-1 ring-black/35">
             <div className="min-w-0">
               <div className="text-[15px] font-semibold text-slate-100">
-                Без звука
+                Mute
               </div>
               <div className="mt-1 text-[13px] text-slate-400">
-                Уведомления для этого чата приглушены (локально).
+                Notifications for this chat are silenced (locally).
               </div>
             </div>
             <input
@@ -95,7 +95,7 @@ export function ChatSettingsView({
               className="space-y-3 rounded-2xl bg-[#17212b] p-4 ring-1 ring-black/35"
             >
               <div className="text-[15px] font-semibold text-slate-100">
-                Название группы
+                Group name
               </div>
               <input
                 value={titleDraft}
@@ -112,24 +112,25 @@ export function ChatSettingsView({
                     : 'cursor-not-allowed bg-slate-800 text-slate-500',
                 )}
               >
-                Сохранить название
+                Save name
               </button>
             </form>
           ) : null}
 
           <div className="rounded-2xl bg-[#17212b] p-4 ring-1 ring-black/35">
             <div className="text-[15px] font-semibold text-rose-200">
-              Опасная зона
+              Danger zone
             </div>
             <p className="mt-2 text-[13px] text-slate-400">
-              Очистка удаляет сообщения в этом демо-приложении без восстановления.
+              Clearing removes the messages in this demo app with no way to
+              restore them.
             </p>
             <button
               type="button"
               onClick={() => {
                 if (
                   window.confirm(
-                    'Очистить историю сообщений в этом чате?',
+                    'Clear the message history in this chat?',
                   )
                 ) {
                   clearChatHistory(chatId)
@@ -138,7 +139,7 @@ export function ChatSettingsView({
               }}
               className="mt-4 h-11 w-full rounded-2xl bg-rose-500/15 text-[15px] font-semibold text-rose-100 hover:bg-rose-500/25"
             >
-              Очистить историю
+              Clear history
             </button>
           </div>
         </div>

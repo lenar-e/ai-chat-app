@@ -95,7 +95,7 @@ export function ChatSidebar({ className }: { className?: string }) {
             <button
               type="button"
               className="flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:bg-white/5"
-              title="Профиль"
+              title="Profile"
               onClick={() => setAppMainView('profile')}
             >
               <User size={20} strokeWidth={1.75} aria-hidden />
@@ -103,7 +103,7 @@ export function ChatSidebar({ className }: { className?: string }) {
             <button
               type="button"
               className="flex h-10 w-10 items-center justify-center rounded-full text-slate-200 hover:bg-white/5"
-              title="Настройки"
+              title="Settings"
               onClick={() => setAppMainView('settings')}
             >
               <Settings size={20} strokeWidth={1.75} aria-hidden />
@@ -119,7 +119,7 @@ export function ChatSidebar({ className }: { className?: string }) {
               type="search"
               value={sidebarSearch}
               onChange={(e) => setSidebarSearch(e.target.value)}
-              placeholder="Поиск"
+              placeholder="Search"
               className="h-10 w-full rounded-[22px] border border-transparent bg-black/35 pl-[38px] pr-3 text-sm text-slate-100 outline-none placeholder:text-slate-500 focus:border-sky-500/50"
               autoCapitalize="off"
               autoCorrect="off"
@@ -132,7 +132,7 @@ export function ChatSidebar({ className }: { className?: string }) {
       <div className="min-h-0 flex-1 divide-y divide-black/20 overflow-y-auto">
         {filtered.length === 0 ? (
           <div className="px-5 py-8 text-center text-[13px] text-slate-500">
-            Ничего не найдено по запросу
+            Nothing found for your search
           </div>
         ) : (
           filtered.map((chat) => (

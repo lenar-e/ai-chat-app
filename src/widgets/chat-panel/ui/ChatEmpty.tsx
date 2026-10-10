@@ -5,7 +5,7 @@ interface ChatEmptyProps {
   className?: string
 }
 
-/** Пустое состояние панели, когда диалог не выбран */
+/** Empty state shown when no conversation is selected */
 export function ChatEmpty({ className }: ChatEmptyProps) {
   return (
     <main
@@ -19,11 +19,11 @@ export function ChatEmpty({ className }: ChatEmptyProps) {
           <AppLogo variant="hero" />
         </div>
         <h2 className="text-lg font-semibold text-slate-100">
-          Otus Messenger · мок
+          Pulse Messenger · demo
         </h2>
         <p className="mt-2 text-sm leading-relaxed text-slate-400">
-          Слева — список чатов. Сообщения уходят в локальный стор: задержки и
-          ответы имитируют бэкенд.
+          Pick a chat on the left. Messages flow through a local store —
+          latency and replies are simulated to mimic a real backend.
         </p>
       </div>
 

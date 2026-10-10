@@ -7,7 +7,7 @@ import { cn } from '@/shared/lib/cn'
 import { useIsNarrowScreen } from '@/shared/lib/use-media-query'
 import { useMessengerStore } from '@/entities/chat'
 
-/** Главный экран: рейл, список чатов и переписка (адаптивно как в мобильном Telegram). */
+/** Main screen: navigation rail, chat list and conversation (responsive, Telegram-style). */
 export function MessengerPage() {
   const activeChatId = useMessengerStore((s) => s.activeChatId)
   const appMainView = useMessengerStore((s) => s.appMainView)

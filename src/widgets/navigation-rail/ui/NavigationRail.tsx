@@ -127,21 +127,21 @@ export function NavigationRail({ className }: { className?: string }) {
       </div>
 
       <NavButton
-        title="Все чаты"
+        title="All chats"
         active={appMainView === 'messenger'}
         onClick={() => goToMessenger()}
       >
         <MessageSquare {...navIcon} />
       </NavButton>
       <NavButton
-        title="Профиль"
+        title="Profile"
         active={appMainView === 'profile'}
         onClick={() => go('profile')}
       >
         <User {...navIcon} />
       </NavButton>
       <NavButton
-        title="Настройки"
+        title="Settings"
         active={appMainView === 'settings'}
         onClick={() => go('settings')}
       >
@@ -151,7 +151,7 @@ export function NavigationRail({ className }: { className?: string }) {
       <div className="mt-auto flex w-full flex-col items-center">
         <div ref={moreRef}>
           <NavButton
-            title="Ещё"
+            title="More"
             active={moreOpen}
             onClick={() => setMoreOpen((v) => !v)}
           >
@@ -176,7 +176,7 @@ export function NavigationRail({ className }: { className?: string }) {
             className="flex w-full px-4 py-3 text-left text-slate-100 hover:bg-white/5"
             onClick={() => go('profile')}
           >
-            Профиль
+            Profile
           </button>
           <button
             type="button"
@@ -184,10 +184,10 @@ export function NavigationRail({ className }: { className?: string }) {
             className="flex w-full px-4 py-3 text-left text-slate-100 hover:bg-white/5"
             onClick={() => go('settings')}
           >
-            Настройки
+            Settings
           </button>
           <div className="my-2 h-px bg-white/10" />
-          <div className="px-4 py-2 text-[12px] text-slate-500">ai-chat-app v0.0.0</div>
+          <div className="px-4 py-2 text-[12px] text-slate-500">Pulse Messenger v0.0.0</div>
         </div>
       ) : null}
     </aside>

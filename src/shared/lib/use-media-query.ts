@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 
-/** Совпадает с брейкпоинтом `md:` в Tailwind (768px) */
+/** Matches Tailwind's `md:` breakpoint (768px) */
 export function useIsNarrowScreen() {
   const query = '(max-width: 767px)'
   const [matches, setMatches] = useState(() =>
